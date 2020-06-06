@@ -1,6 +1,5 @@
 'use strict';
 var userDialog = document.querySelector('.setup');
-userDialog.classList.remove('hidden');
 var similarListElement = userDialog.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
   .content
@@ -52,5 +51,6 @@ function renderWizards(wizardsArray, destination) {
   destination.appendChild(fragment);
 }
 
+userDialog.classList.remove('hidden');
 renderWizards(wizards, similarListElement);
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
